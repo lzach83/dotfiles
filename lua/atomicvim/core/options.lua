@@ -1,0 +1,37 @@
+local opt = vim.opt
+
+--Line numbers
+opt.relativenumber = true
+opt.number = true
+
+--tabs
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
+
+--line wrapping
+opt.wrap = false
+
+--search settings
+opt.ignorecase = true
+opt.smartcase = true
+
+--appearance
+opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
+
+
+--backspace
+
+--clipboard
+opt.clipboard = ""
+
+--split windows
+opt.splitright = true
+opt.splitbelow = true
+
+
+--makes - a word
+opt.iskeyword:append("-")
