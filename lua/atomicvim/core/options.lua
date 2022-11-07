@@ -22,7 +22,6 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
-
 --backspace
 
 --clipboard
@@ -31,7 +30,6 @@ opt.clipboard = ""
 --split windows
 opt.splitright = true
 opt.splitbelow = true
-
 
 --makes - a word
 opt.iskeyword:append("-")
