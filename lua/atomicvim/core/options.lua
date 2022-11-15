@@ -31,5 +31,6 @@ opt.clipboard = ""
 opt.splitright = true
 opt.splitbelow = true
 
+opt.cmdheight = 1
 --makes - a word
 opt.iskeyword:append("-")

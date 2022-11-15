@@ -26,7 +26,9 @@ return require('packer').startup(function(use)
   use 'bluz71/vim-nightfly-colors'
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-surround'
-
+  use { "catppuccin/nvim", as = "catppuccin" }
+  --harpoon baby
+  use('ThePrimeagen/harpoon')
   --commenting
   use('numToStr/Comment.nvim')
   -- My plugins here
@@ -34,7 +36,10 @@ return require('packer').startup(function(use)
   -- use 'foo2/bar2.nvim'
   use('nvim-tree/nvim-tree.lua')
   use('nvim-lualine/lualine.nvim')
-  
+
+  -- fuzzy finding w/ telescope
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
   --autocompletion
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
@@ -59,7 +64,11 @@ return require('packer').startup(function(use)
   -- formatting & linting
   use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-  
+
+  -- Lua
+  use {
+    "folke/which-key.nvim",
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
