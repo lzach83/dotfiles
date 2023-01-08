@@ -75,6 +75,14 @@ return require("packer").startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	})
+
+	--ADHD BRAIN
+	use({
+		"folke/twilight.nvim",
+	})
+	--themes
+	use("tanvirtin/monokai.nvim")
+	use("sainnhe/everforest")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

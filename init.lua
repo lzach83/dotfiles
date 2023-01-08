@@ -12,8 +12,8 @@ require("atomicvim.plugins.lsp.mason")
 require("atomicvim.plugins.lsp.lspsaga")
 require("atomicvim.plugins.lsp.lspconfig")
 require("atomicvim.plugins.lsp.null-ls")
-require("atomicvim.plugins.whichkey")
 require("atomicvim.plugins.harpoon")
+require("atomicvim.plugins.twilight")
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup("HighlightYank", {})

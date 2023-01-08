@@ -1,6 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -10,7 +9,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.mapleader = " "
 
-
+vim.cmd("nmap <F1> :echo <CR>")
+vim.cmd("imap <F1> <C-o>:echo <CR>")
 --general keymaps
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Move text up and down
