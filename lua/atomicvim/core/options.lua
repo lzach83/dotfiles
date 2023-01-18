@@ -34,3 +34,16 @@ opt.splitbelow = true
 opt.cmdheight = 1
 --makes - a word
 opt.iskeyword:append("-")
+
+--undos
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+--scroll
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+
+--updates
+opt.updatetime = 50
+
+opt.colorcolumn = "80"

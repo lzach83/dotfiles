@@ -46,3 +46,22 @@ keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string i
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts) -- list open buffers in current neovim instance
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help tags
+
+--Keep cursor in middle when moving half screens
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+--Keep current copy register pastes over current highlight
+keymap("x", "<Leader>p", '"_dP', opts)
+
+--Adds leader(y/d) to add selection to system clipboard
+keymap("n", "<Leader>y", '"+y', opts)
+keymap("v", "<Leader>y", '"+y', opts)
+keymap("n", "<Leader>Y", '"+Y', opts)
+
+keymap("v", "<Leader>d", '"_d', opts)
+keymap("n", "<Leader>d", '"_d', opts)
+
+keymap("n", "Q", "<nop>", opts)
+
+keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
