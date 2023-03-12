@@ -20,6 +20,10 @@ end
 require("luasnip/loaders/from_vscode").lazy_load()
 
 vim.opt.completeopt = "menu,menuone,noselect"
+vim.g.copilot_assumed_mapped = true
+vim.g.copilot_no_tab_map = true
+
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 cmp.setup({
 	snippet = {
@@ -29,7 +33,21 @@ cmp.setup({
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<S-TAB>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-		["<TAB>"] = cmp.mapping.select_next_item(), -- next suggestion
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif require("luasnip").expand_or_jumpable() then
+				vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
+			elseif vim.b._copilot_suggestion ~= nil then
+				vim.fn.feedkeys(vim.api.nvim_replace_termcodes(vim.fn["copilot#Accept"](), true, true, true), "")
+			else
+				fallback()
+			end
+		end, {
+			"i",
+			"s",
+		}),
+		--[[ ["<TAB>"] = cmp.mapping.select_next_item(), -- next suggestion ]]
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions

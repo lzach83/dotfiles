@@ -37,7 +37,6 @@ opt.iskeyword:append("-")
 
 --undos
 opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 --scroll
 opt.scrolloff = 8
@@ -46,4 +45,4 @@ opt.signcolumn = "yes"
 --updates
 opt.updatetime = 50
 
-opt.colorcolumn = "80"
+opt.colorcolumn = "150"

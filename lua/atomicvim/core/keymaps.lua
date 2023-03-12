@@ -11,6 +11,8 @@ vim.g.mapleader = " "
 
 vim.cmd("nmap <F1> :echo <CR>")
 vim.cmd("imap <F1> <C-o>:echo <CR>")
+
+keymap("i", "jj", "<ESC>", opts)
 --general keymaps
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Move text up and down

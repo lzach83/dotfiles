@@ -10,10 +10,14 @@ require("atomicvim.plugins.telescope")
 require("atomicvim.plugins.nvim-cmp")
 require("atomicvim.plugins.lsp.mason")
 require("atomicvim.plugins.lsp.lspsaga")
-require("atomicvim.plugins.lsp.lspconfig")
+--[[ require("atomicvim.plugins.lsp.lspconfig") ]]
+require("atomicvim.plugins.fugitive")
 require("atomicvim.plugins.lsp.null-ls")
 require("atomicvim.plugins.harpoon")
 require("atomicvim.plugins.twilight")
+require("atomicvim.plugins.rust-tools")
+require("atomicvim.core.utils")
+
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup("HighlightYank", {})
