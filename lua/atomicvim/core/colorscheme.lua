@@ -2,10 +2,16 @@ local ok, _ = pcall(vim.cmd, 'colorscheme everforest')
 if not ok then
   vim.cmd 'colorscheme default'
 end
+
+
+
+
+
 --[[ require("monokai").setup({}) ]]
 --[[ require("monokai").setup({ palette = require("monokai").pro }) ]]
 --[[ require("monokai").setup({ palette = require("monokai").soda }) ]]
 --[[ require("monokai").setup({ palette = require("monokai").ristretto }) ]]
+
 --[[ vim.cmd.colorscheme("catppuccin") ]]
 --[[ require("catppuccin").setup({ ]]
 --[[ 	flavour = "mocha", -- latte, frappe, macchiato, mocha ]]
@@ -46,3 +52,4 @@ end
 --[[ 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations) ]]
 --[[ 	}, ]]
 --[[ }) ]]
+--[[ vim.cmd("colorscheme tokyonight-night") ]]

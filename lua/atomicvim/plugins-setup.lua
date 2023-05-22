@@ -109,6 +109,8 @@ return require("packer").startup(function(use)
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	})
 
+  use 'nvim-treesitter/nvim-treesitter-context'
+
 	--ADHD BRAIN
 	use({
 		"folke/twilight.nvim",
@@ -120,19 +122,8 @@ return require("packer").startup(function(use)
 	--themes
 	use("tanvirtin/monokai.nvim")
 	use("sainnhe/everforest")
+  use 'folke/tokyonight.nvim'
 
-	--FOR DASHBOARD
-
-	use({
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require("dashboard").setup({
-				-- config
-			})
-		end,
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
