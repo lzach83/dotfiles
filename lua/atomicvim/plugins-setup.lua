@@ -22,7 +22,6 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("bluz71/vim-nightfly-colors")
-	use("christoomey/vim-tmux-navigator")
 	use("tpope/vim-surround")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
@@ -39,14 +38,10 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 	--autocompletion
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
@@ -109,6 +104,8 @@ return require("packer").startup(function(use)
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	})
 
+  use 'nvim-treesitter/nvim-treesitter-context'
+
 	--ADHD BRAIN
 	use({
 		"folke/twilight.nvim",
@@ -120,19 +117,9 @@ return require("packer").startup(function(use)
 	--themes
 	use("tanvirtin/monokai.nvim")
 	use("sainnhe/everforest")
+  use 'folke/tokyonight.nvim'
+  use "rebelot/kanagawa.nvim"
 
-	--FOR DASHBOARD
-
-	use({
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
-		config = function()
-			require("dashboard").setup({
-				-- config
-			})
-		end,
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
