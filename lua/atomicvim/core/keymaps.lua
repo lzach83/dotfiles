@@ -67,3 +67,5 @@ keymap("n", "<Leader>d", '"_d', opts)
 keymap("n", "Q", "<nop>", opts)
 
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+
+keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", opts)

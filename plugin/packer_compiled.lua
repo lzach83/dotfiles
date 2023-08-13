@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  aurora = {
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/aurora",
+    url = "https://github.com/crispybaccoon/aurora"
+  },
   catppuccin = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -114,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "https://github.com/tjdevries/colorbuddy.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -123,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
+  },
+  ["format-ts-errors.nvim"] = {
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/format-ts-errors.nvim",
+    url = "https://github.com/davidosomething/format-ts-errors.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -175,6 +190,17 @@ _G.packer_plugins = {
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/monokai.nvim",
     url = "https://github.com/tanvirtin/monokai.nvim"
   },
+  neogen = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vneogen\frequire\0" },
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/neogen",
+    url = "https://github.com/danymat/neogen"
+  },
+  neovim = {
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -189,6 +215,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-noirbuddy"] = {
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/nvim-noirbuddy",
+    url = "https://github.com/jesseleite/nvim-noirbuddy"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -215,6 +246,11 @@ _G.packer_plugins = {
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -239,11 +275,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/zacharylee/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["twilight.nvim"] = {
     loaded = true,
@@ -282,6 +313,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for lspsaga.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
 time([[Config for lspsaga.nvim]], false)
+-- Config for: neogen
+time([[Config for neogen]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vneogen\frequire\0", "config", "neogen")
+time([[Config for neogen]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

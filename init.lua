@@ -17,6 +17,7 @@ require("atomicvim.plugins.harpoon")
 require("atomicvim.plugins.twilight")
 require("atomicvim.plugins.rust-tools")
 require("atomicvim.core.utils")
+require("atomicvim.plugins.ts-pretty")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
