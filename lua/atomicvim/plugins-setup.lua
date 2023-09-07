@@ -42,15 +42,15 @@ return require("packer").startup(function(use)
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-  use {
-    "danymat/neogen",
-    config = function()
-        require('neogen').setup {}
-    end,
-    requires = "nvim-treesitter/nvim-treesitter",
-    -- Uncomment next line if you want to follow only stable versions
-    -- tag = "*"
-} --for JSDoc | TSDoc
+	use({
+		"danymat/neogen",
+		config = function()
+			require("neogen").setup({})
+		end,
+		requires = "nvim-treesitter/nvim-treesitter",
+		-- Uncomment next line if you want to follow only stable versions
+		-- tag = "*"
+	}) --for JSDoc | TSDoc
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
@@ -113,15 +113,15 @@ return require("packer").startup(function(use)
 		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
 	})
 
-  use 'nvim-treesitter/nvim-treesitter-context'
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	--ADHD BRAIN
 	use({
 		"folke/twilight.nvim",
 	})
 
-  --TS Prettier
-  use("davidosomething/format-ts-errors.nvim")
+	--TS Prettier
+	use("davidosomething/format-ts-errors.nvim")
 
 	use("tpope/vim-fugitive")
 
@@ -129,14 +129,14 @@ return require("packer").startup(function(use)
 	--themes
 	use("tanvirtin/monokai.nvim")
 	use("sainnhe/everforest")
-  use "rebelot/kanagawa.nvim"
-  use {'nyoom-engineering/oxocarbon.nvim'}
-  use {'crispybaccoon/aurora'}
-  use {'rose-pine/neovim'}
-  use {
-  "jesseleite/nvim-noirbuddy",
-  requires = { "tjdevries/colorbuddy.nvim", branch = "dev" }
-}
+	use("rebelot/kanagawa.nvim")
+	use({ "nyoom-engineering/oxocarbon.nvim" })
+	use({ "crispybaccoon/aurora" })
+	use({ "rose-pine/neovim" })
+	use({
+		"jesseleite/nvim-noirbuddy",
+		requires = { "tjdevries/colorbuddy.nvim", branch = "dev" },
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
